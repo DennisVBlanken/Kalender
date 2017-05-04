@@ -11,6 +11,5 @@ function index(){
 }
 
 function delete($id) {
-
 	
 }

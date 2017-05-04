@@ -1,12 +1,16 @@
- <?php
+<?php
 
- function getBirthdays(){
+function getBirthdays(){
+	$db = openDatabaseConnection();
+	$query = $db->prepare("SELECT * FROM birthdays");
+	$query->execute();
+	return $query->fetchAll();
+}
 
- 	$db = openDatabaseConnection();
+function addBirthday(){
 
- 	$query = $db->prepare("SELECT * FROM birthdays WHERE month = 2");
+}
 
- 	$query->execute();
+function createBirthday(){
 
- 	return $query->fetchAll();
- }
+}

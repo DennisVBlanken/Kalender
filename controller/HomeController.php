@@ -4,7 +4,7 @@ require(ROOT . "model/HomeModel.php");
 
 function index() 
 {
-	echo "Je bent nu in home!!";
+echo "Home index";
 }
 
 function exampleOne()
