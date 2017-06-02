@@ -1,7 +1,6 @@
 <?php
 
-function getAllAuthors() 
-{
+function getAllAuthors() {
 	$db = openDatabaseConnection();
 
  	$sql = "SELECT * FROM authors";

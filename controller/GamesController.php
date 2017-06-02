@@ -5,32 +5,33 @@ require(ROOT . "model/GamesModel.php");
 
 function index(){
 	render('Games/index', array(
-		'Games' => getAllGames()
+	'Publishers' => getAllPublishers()
 	));
 }
 
 function show($id) {
 	render('Games/Show', array(
-		'Games' => getAllGames()
+		'Games' => getGamesFromPublishers($id)
 	));
 }
-
-function create() {
-
+function add() {
+	render('Games/Add');
+	if (isset($_POST["Game"])) {
+		$game = $_POST["Game"];
+		$publishers_id = $_POST["Publishers_id"];
+		$price = $_POST["Price"];
+	
+		$result = createGame($game, $publishers_id, $price);
+		if ($result == "Yes") {
+			header('location: /Games-opdracht/Games');
+		}
+	}
 }
-
-function createSave() {
-
+function edit($id) {
+	render('Games/Edit', array(
+		"game" => getGame($id)
+		));
 }
-
-function edit($student_id) {
-
-}
-
 function editSave() {
-
-}
-
-function delete() {
 
 }

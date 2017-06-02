@@ -1,53 +1,32 @@
 <html>
 <head>
 	<title>Games</title>
-	<link href="css/gamesStyle.css" rel="stylesheet" type="text/css">
+	<link href="/Games-opdracht/css/gamesStyle.css" rel="stylesheet" type="text/css">
 </head>
 <body>
 <main>
 	
 	<header>
 		<h1>Games</h1>
+        <table>
+    <th class="taskbar"><a class="taskbar" href="/Games-opdracht/Games">Home</a></th>
+    <th class="taskbar"><a class="taskbar" href="/Games-opdracht/Games/Add">Add</a></th>
+    <th class="taskbar"><a class="taskbar" href="/Games-opdracht/Games/Edit">Edit</a></th>
+        </table>
 	</header>
 	<table>
-<?php
-$link = mysqli_connect("localhost", "root", "", "game_database");
- 
-// Check connection
-if($link === false){
-    die("ERROR: Could not connect. " . mysqli_connect_error());
-}
- 
-// Attempt select query execution
-$sql = "SELECT * FROM games_db";
-if($result = mysqli_query($link, $sql)){
-    if(mysqli_num_rows($result) > 0){
-        echo "<table>";
-            echo "<tr>";
-                echo "<th>Games</th>";
-                echo "<th>Price</th>";
-            echo "</tr>";
-        while($row = mysqli_fetch_array($result)){
-            echo "<tr>";
-                echo "<td>" . $row['name'] . "</td>";
-                echo "<td>" . $row['price'] . "</td>";
-            echo "</tr>";
-        }
-        echo "</table>";
-        // Free result set
-        mysqli_free_result($result);
-    } else{
-        echo "No records matching your query were found.";
-    }
-} else{
-    echo "ERROR: Could not able to execute $sql. " . mysqli_error($link);
-}
- 
-// Close connection
-mysqli_close($link);
-?>
+    <tr>
+        <th>Games</th>
+        <th>Price</th>
+    </tr>
+<?php foreach ($Games as $game) { ?>
+    <tr>
+        <td><?= $game["name"]; ?></td>
+        <td><?= $game["price"]; ?></td>
+    </tr>
+<?php } ?>
 	</table>
-	<footer>&copy; by Da Vinci College</footer>
+	<footer>&copy; by Dennis V.B.</footer>
 </main>
 </body>
 </html>

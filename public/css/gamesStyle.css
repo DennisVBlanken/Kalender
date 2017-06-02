@@ -3,7 +3,6 @@
 	padding: 0;
 }
 body {
-	background-color: white;
 	background-position: center;
 	background-repeat: repeat-y;
 }
@@ -67,6 +66,7 @@ h4 {
 	margin: 0px;
 }
 table {
+background-color:white;
 border-collapse:collapse;
 width: 500px;
 margin-left: auto;
@@ -102,4 +102,10 @@ form input[type="text"]{
 
 form div {
 	margin-bottom : 3px;
+}
+a.taskbar {
+	color: white;
+}
+th.taskbar {
+	background-color: grey;
 }
