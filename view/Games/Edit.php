@@ -18,8 +18,8 @@
 	<?php echo '<form action="' . URL . 'games/editSave' . '" method="post">'; ?>
 		<input type="text" name="Game" placeholder="Name of the games"><br>
 		<input type="text" name="Price" placeholder="Price"><br>
-		<input type="number" name="Publishers_id" hidden value="<?= $game['publishers_id'] ?>" placeholder="Publisher id"><br>
-		<input type="number" name="id" hidden value="<?= $game['id'] ?>"><br>
+		<input type="number" name="Publishers_id" hidden value="<?= $game['publishers_id'] ?>" placeholder="Publisher id">
+		<input type="number" name="id" hidden value="<?= $game['id'] ?>">
 
 		<input type="submit" value="Submit">
 	</form>
