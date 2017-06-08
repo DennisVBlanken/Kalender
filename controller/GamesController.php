@@ -34,4 +34,23 @@ function edit($id) {
 }
 function editSave() {
 
+	$id = $_POST["id"];
+	$game = $_POST["Game"];
+	$publishers_id = $_POST["Publishers_id"];
+	$price = $_POST["Price"];
+
+	$result = editGame($id, $game, $publishers_id, $price);
+	if ($result == "Yes") {
+		header('location: /Games-opdracht/Games');
+	}
 }
+function delete($id) {
+	$result = deleteGame($id);
+
+	if ($result == "Yes") {
+		header('location: /Games-opdracht/Games');
+	}
+
+}
+
+// Door © Dennis V.B.

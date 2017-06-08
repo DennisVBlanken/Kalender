@@ -87,7 +87,8 @@ footer {
 
 form, form input, form span{
 	font-size : 20px;
-
+	margin: 10px;
+	margin-left: 100px;
 }
 
 form label {

@@ -2,9 +2,8 @@
 
 require(ROOT . "model/HomeModel.php");
 
-function index() 
-{
-echo "Home index";
+function index() {
+	render('index');
 }
 
 function exampleOne()

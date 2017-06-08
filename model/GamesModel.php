@@ -32,11 +32,11 @@ function getGamesFromPublishers($publishers_id) {
 function getGame($id) {
 	$db = openDatabaseConnection();
 
-    $query = $db->prepare("SELECT * FROM games_db WHERE $id = (:id)");
-    $query->bindParam(":id", $id);
+    $query = $db->prepare("SELECT * FROM games_db WHERE id = (:id)");
+    $query->bindParam(':id', $id);
     $query->execute();
 
-	return $query->fetch(PDO::FETCH_ASSOC);@
+	return $query->fetch(PDO::FETCH_ASSOC);
 }
 function createGame($game, $publishers_id, $price) {
 	$db = openDatabaseConnection();
@@ -73,3 +73,23 @@ function EditGame($id, $game, $publishers_id, $price) {
 
 	return "Yes";
 }
+
+function deleteGame($id) {
+	$db = openDatabaseConnection();
+
+	$sql = "DELETE FROM games_db WHERE id = (:id)";
+
+	$query = $db->prepare($sql);
+
+	$query->bindParam(':id', $id);
+
+	$query->execute();
+
+	$db = null;
+
+	return "Yes";
+}
+
+
+
+// Door © Dennis V.B.
