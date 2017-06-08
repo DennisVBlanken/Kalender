@@ -8,7 +8,8 @@
 	<header>
 		<h1>Games</h1>
         <table>
-    <th class="taskbar"><a class="taskbar" href="/Games-opdracht/Games">Home</a></th>
+    <th class="taskbar"><a class="taskbar" href="/Games-opdracht">Home</a></th>
+    <th class="taskbar"><a class="taskbar" href="/Games-opdracht/Games">Games DB</a></th>
     <th class="taskbar"><a class="taskbar" href="/Games-opdracht/Games/Add">Add</a></th>
         </table>
 	</header>

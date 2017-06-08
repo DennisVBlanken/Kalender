@@ -8,6 +8,7 @@
 	<header>
 		<h1>Framework</h1>
         <table>
+    <th class="taskbar"><a class="taskbar" href="/Games-opdracht">Home</a></th>
     <th class="taskbar"><a class="taskbar" href="/Games-opdracht/Games">Games DB</a></th>
         </table>
 	</header>
